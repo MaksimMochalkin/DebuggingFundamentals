@@ -1,4 +1,6 @@
-﻿namespace Task1
+﻿using System.Reflection.Metadata;
+
+namespace Task1
 {
     public class Product
     {
@@ -19,12 +21,7 @@
                 return false;
             }
 
-            if (this.Name == product.Name && this.Price == product.Price)
-            {
-                return true;
-            }
-
-            return false;
+            return product.Name == this.Name && product.Price == this.Price;
         }
     }
 }
